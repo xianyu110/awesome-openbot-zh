@@ -19,6 +19,11 @@
     .warn { color:var(--warn); font-weight:600; }
     pre { background:#0b1220; color:#d7e2f0; padding:1rem; border-radius:8px; overflow:auto; font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.9em; }
     footer { margin-top:2rem; color:var(--muted); font-size:.9rem; }
+
+    img.shot { max-width:100%; height:auto; border-radius:8px; margin:.75rem 0; border:1px solid rgba(127,127,127,.25); }
+    figcaption { color:var(--muted); font-size:.85rem; margin:.25rem 0 1rem; }
+    .tag-real { color:#3dd68c; font-weight:600; }
+    .tag-schema { color:#e6a23c; font-weight:600; }
   </style>
 </head>
 <body>
@@ -36,6 +41,29 @@
     <p>只认官方 Releases：</p>
     <pre>https://github.com/nightly-labs/openbot/releases</pre>
     <p>macOS：`OpenBot-*-arm64.dmg` / `*-x64.dmg` · Windows：`*-x64.exe` · Linux：AppImage</p>
+  </div>
+  <div class="card">
+    <h2>安装与界面截图</h2>
+    <figure>
+      <img class="shot" src="images/01-download.png" alt="AppImage v0.51.1 下载确认" loading="lazy" />
+      <figcaption><span class="tag-real">真实截图</span> · AppImage v0.51.1 下载确认</figcaption>
+    </figure>
+    <figure>
+      <img class="shot" src="images/02-first-launch-log.png" alt="首次启动日志（OPENBOT_DISABLE_GPU=1）" loading="lazy" />
+      <figcaption><span class="tag-real">真实截图</span> · 首次启动日志（OPENBOT_DISABLE_GPU=1）</figcaption>
+    </figure>
+    <figure>
+      <img class="shot" src="images/03-gui-language.png" alt="语言选择 GUI" loading="lazy" />
+      <figcaption><span class="tag-real">真实截图</span> · 语言选择 GUI</figcaption>
+    </figure>
+    <figure>
+      <img class="shot" src="images/04-danger-consent-schematic.png" alt="danger-full-access 同意（未点 Continue）" loading="lazy" />
+      <figcaption><span class="tag-schema">示意图</span> · danger-full-access 同意（未点 Continue）</figcaption>
+    </figure>
+    <figure>
+      <img class="shot" src="images/05-provider-empty-schematic.png" alt="Providers 空配置（不填 API Key）" loading="lazy" />
+      <figcaption><span class="tag-schema">示意图</span> · Providers 空配置（不填 API Key）</figcaption>
+    </figure>
   </div>
   <footer>教程 MIT · 上游 PolyForm Noncommercial 1.0.0 · 2026-10-27</footer>
 </main>

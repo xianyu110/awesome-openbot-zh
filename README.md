@@ -11,6 +11,20 @@
 
 ---
 
+## 截图索引
+
+| # | 文件 | 类型 | 说明 |
+|---|------|------|------|
+| 1 | [`images/01-download.png`](images/01-download.png) | **真实** | AppImage v0.51.1 下载 |
+| 2 | [`images/02-first-launch-log.png`](images/02-first-launch-log.png) | **真实** | 首次启动日志（`OPENBOT_DISABLE_GPU=1`） |
+| 3 | [`images/03-gui-language.png`](images/03-gui-language.png) | **真实** | 语言选择 GUI |
+| 4 | [`images/04-danger-consent-schematic.png`](images/04-danger-consent-schematic.png) | **示意图** | danger-full-access 同意（未点 Continue） |
+| 5 | [`images/05-provider-empty-schematic.png`](images/05-provider-empty-schematic.png) | **示意图** | Providers 空配置（不填 API Key） |
+
+> Linux 无独显时需 `OPENBOT_DISABLE_GPU=1`，否则 GPU FATAL。未登录任何供应商账号。
+
+---
+
 ## 先分清：这不是 Intel OpenBot
 
 | 名称 | 是什么 | 链接 |
@@ -103,6 +117,18 @@ chmod +x OpenBot-*-x86_64.AppImage   # 或 arm64
 ./OpenBot-*-x86_64.AppImage
 ```
 
+真实下载与文件确认：
+
+![OpenBot AppImage 下载](images/01-download.png)
+
+首次启动日志（GPU 已禁用）：
+
+![OpenBot 首次启动日志](images/02-first-launch-log.png)
+
+语言选择界面（真实 GUI，Xvfb）：
+
+![OpenBot 语言选择](images/03-gui-language.png)
+
 常见系统注意（摘自官方）：
 
 - 需要 **fuse3**（`fusermount3`），不是 libfuse2。  
@@ -156,7 +182,11 @@ Windows：自行安装原生 CLI，确保 PowerShell 里能跑 `codex` / `claude
 5. 确认对话与队列行为正常后，再尝试更复杂的改代码任务。  
 6. （可选）试一下 Agent 之间发消息 / 共享频道——先用无敏感数据。
 
-终端风格示意：
+> **示意图**：首次 danger 同意与 Providers 空配置（本教程不点 Continue、不填 API Key）：
+
+![OpenBot danger 同意示意图](images/04-danger-consent-schematic.png)
+
+![OpenBot Providers 空配置示意图](images/05-provider-empty-schematic.png)
 
 ```text
 OpenBot · provider: Ollama (local) · agent: demo-reader
